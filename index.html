@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Automating and linking together web services and APIs using the Rules
+        module</title>
+
+    <meta name="description"
+          content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"/>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/dru.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="lib/css/font-awesome.min.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+        document.write('<link rel="stylesheet" href="css/print/' + ( window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">');
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides">
+
+<section class="drupalcon-style" data-background="images/background.png">
+    <img src="images/drupalcon_prague_logo_transp.png" alt="Drupalcon Logo"
+         style="border:0"/>
+
+    <h3>Automating and linking together web services and APIs using the Rules
+        module</h3>
+
+    <p>
+        <small>Sept 25th, 2013 | by <a href="http://drunomics.com">drunomics</a>
+        </small>
+    </p>
+</section>
+
+<section class="bg-white" data-background="#fff">
+    <h2>Hi, we are ...</h2>
+    <br />
+    <ul>
+        <li>Wolfgang Ziegler (fago), @the_real_fago</li>
+        <li>Christian Ziegler (criz), @crizzirc</li>
+    </ul><br /><br />
+    <img style="border:0; box-shadow: none;" src="images/logo_300.png" alt="drunomics logo" />
+
+</section>
+
+<section>
+    <section>
+        <h2>What can you expect?</h2>
+
+        <p>
+            No unicorns. No miracles.<br/>
+            But socialmedia, rules, APIs, automation and all together...
+        </p>
+
+    </section>
+
+    <section class="bg-white" data-background="#fff">
+        <h2>The Rules module</h2>
+        Reacting on various events in your Drupal system.
+        <br/><br/>
+
+        <h3>Events - Conditions - Actions</h3>
+
+    </section>
+
+    <section>
+        <h2>But wouldn't it be great to react also on external events?</h2>
+    </section>
+
+    <section>
+        <h2>Or to have actions for creating content on Facebook or Twitter?</h2>
+
+    </section>
+
+    <section class="bg-white" data-background="#fff">
+        <h1>Now you can!</h1>
+        <img src="images/happy.gif" alt="Happy Drupalist"/>
+    </section>
+    <section>
+        <h2>Some examples</h2>
+    </section>
+    <section>
+      <div class="icons" style="font-family:fontawesome"><span class="icon-twitter"></span><span class="arrow icon-chevron-right"></span><span class="icon-facebook"></span></div><br clear="all" />
+      <h3>Posting tweets on Facebook automatically</h3>
+    </section>  
+    <section>
+       <div class="icons" style="font-family:fontawesome"><span class="icon-facebook"></span><span class="arrow icon-chevron-right"></span><span class="icon-tint"></span></div><br clear="all" />
+       <h3>Saving Facebook posts as Drupal entities</h3>
+    </section>
+    <section>
+        <div class="icons" style="font-family:fontawesome"><span class="icon-flickr"></span><span class="arrow icon-chevron-right"></span><span class="icon-dropbox"></span></div><br clear="all" />
+       <h3>Saving flickr pictures in your dropbox</h3>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h2>Why do we need this?</h2>
+        Can't we just use a tool like ifttt.com?
+    </section>
+    <section class="bg-white" data-background="#fff">
+        <h2>More flexibility when using Drupal</h2>
+        <ul>
+            <li>Already hundreds of events, conditions and actions available
+            </li>
+            <li>Seamless integration to Drupal`s entity API</li>
+        </ul>
+    </section>
+    <section>
+        <h2>It's OpenSource</h2>
+        <ul>
+            <li>Adopt it as you need it</li>
+            <li>Integrate your own tools</li>
+            <li>No vendor lock-in</li>
+        </ul>
+    </section>
+    <section class="bg-white" data-background="#fff">
+        <h2>You control your data</h2>
+        <ul>
+            <li>Trust yourself, not others</li>
+            <li>No need to authenticate third-party applications</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Look outside your box</h2>
+        <ul>
+            <li>Don't forget about your content outside your CMS</li>
+            <li>Interaction happens everywhere</li>
+            <li>Leverage intelligence from all the available APIs out there</li>
+        </ul>
+    </section>
+</section>
+<section>
+    <section>
+        <h2>But how does it work now?</h2>
+    </section>
+    <section class="bg-white" data-background="#fff">
+        <img src="images/fluxkraft_logo_500.png" alt="fluxkraft logo"
+             style="border:0; box-shadow: none"/>
+    </section>
+    <section class="bg-white" data-background="#fff">
+        <h2>fluxkraft = Rules + External services</h2>
+          packaged in an easy to install distribution
+    </section>
+    <section>
+        <h2>Module suite vs. distribution</h2>
+    </section>
+    <section class="bg-white" data-background="#fff">
+        <h2>The flux module suite</h2>
+
+        <p>Drupal + Rules + external services</p>
+
+        <p>Install flux Services + e.g. flux flickr modules</p>
+
+    </section>
+    <section>
+        <h4>It looks like this</h4>
+        <img src="images/rules_overview_seven.png"
+             alt="fluxkraft module suite"/>
+    </section>
+    <section class="bg-white" data-background="#fff">
+        <h2>fluxkraft distribution</h2>
+        <a href="http://www.fluxkraft.com">fluxkraft.com</a><br />
+        <a href="http://drupal.org/project/fluxkraft_distro">drupal.org/project/fluxkraft_distro</a><br/>
+        Download and install!
+    </section>
+    <section>
+        <h4>It looks like this</h4>
+        <img src="images/rules_overview.png" alt="fluxkraft distribution"/>
+    </section>
+</section>
+<section>
+    <section class="bg-white" data-background="#fff">
+        <h2>A note for developers</h2>
+    </section>
+    <section data-background="images/itangalo_by_arianek.jpg">
+        <h1>fluxkraft uses OOP!</h1>
+    </section>
+    <section class="bg-white" data-background="#fff">
+        <h2>As a result we get</h2>
+        <ul>
+            <li>Less Drupalism -> use libraries!</li>
+            <li>fluxservice comes with Guzzle:
+                http://guzzlephp.org/
+            </li>
+            <li>An easy port to Drupal 8 (future proof)</li>
+            <li>Better chances that external developers chime in</li>
+        </ul>
+    </section>
+</section>
+<section>
+    <section>
+        <h2>Basic concepts</h2>
+    </section>
+    <section class="bg-white" data-background="#fff">
+        <h3>Service endpoints</h3>
+        Before interacting with a service you need to register application
+        credentials (e.g. your Twitter app).
+    </section>
+    <section>
+        <h3>Service accounts</h3>
+        Multiple service user accounts<br/>
+        Per user or system-wide
+    </section>
+    <section class="bg-white" data-background="#fff">
+        <h2>Remote entities for everything!</h2>
+    </section>
+    <section>
+        <h2>Supported services</h2>
+        <ul>
+            <li>Twitter</li>
+            <li>Facebook</li>
+            <li>RSS/Atom feeds</li>
+            <li>Dropbox</li>
+            <li>flickr</li>
+            <li>LinkedIn (dev)</li>
+            <li>XING (dev)</li>
+        </ul>
+    </section>
+</section>
+<section>
+    <section data-background="images/b9.jpg">
+        <h2>Time for some action!</h2>
+    </section>
+    <section>
+        <div class="icons" style="font-family:fontawesome"><span class="icon-facebook"></span><span class="arrow icon-chevron-right"></span><span class="icon-twitter"></span></div><br clear="all" />
+      <h3>Sending a Facebook post to twitter</h3>
+         <a href="https://www.youtube.com/watch?v=bUhtVZYeWF0" target="_blank">Link to the video</a>
+    </section>
+    <section>
+      <div class="icons" style="font-family:fontawesome"><span class="icon-twitter"></span><span class="arrow icon-chevron-right"></span><span class="icon-twitter"></span></div><br clear="all" />
+      <h3>Automatic retweeting</h3>
+            <a href="https://www.youtube.com/watch?v=7LC1KspvKI4" target="_blank">Link to the video</a>
+    </section>
+    <section>
+      <div class="icons" style="font-family:fontawesome"><span class="icon-rss"></span><span class="arrow icon-chevron-right"></span><span class="icon-envelope-alt"></span></div><br clear="all" />
+      <h3>Sending an e-mail when there is a new RSS item</h3>
+            <a href="https://www.youtube.com/watch?v=2RG6uP6g3Ws" target="_blank">Link to the video</a>
+    </section>
+    <section>
+      <div class="icons" style="font-family:fontawesome"><span class="icon-twitter"></span><span class="arrow icon-chevron-right"></span><span class="icon-twitter"></span></div><br clear="all" />
+      <h3>Automating Twitter lists</h3>
+            <a href="https://www.youtube.com/watch?v=xU4KfP2N070" target="_blank">Link to the video</a>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h2>Good to know...</h2>
+    </section>
+    <section>
+        <h2>Cron and service rate limits</h2>
+        <ul>
+            <li>Configure cron on your server</li>
+            <li>Check API limits</li>
+            <li>Be careful what you are doing</li>
+        </ul>
+    </section>
+    <!--
+TODO: one slide per topic / issue
+    -->
+
+    <section class="bg-white" data-background="#fff">
+        <h2>Respect API's terms of services</h2>
+        <ul>
+            <li>Be careful what you are doing</li>
+            <li>Automating doesn't make sense in every case</li>
+            <li>Don't spam!</li>
+        </ul>
+    </section>
+</section>
+<section>
+    <section data-background="images/hoverboard.jpeg">
+        <h1>Back to the future</h1>
+    </section>
+    <section class="bg-white" data-background="#fff">
+        <h3>Next steps</h3>
+        <ul>
+            <li>Share rules on fluxkraft.com</li>
+            <li>Improve scheduling</li>
+            <li>Improve logging</li>
+            <li>Provide more documentation</li>
+        </ul>
+    </section>
+    <section>
+        <h3>Goals</h3>
+        <ul>
+            <li>Active community of happy users</li>
+            <li>Contributions, contributions, contributions</li>
+            <li>Make integrating new APIs fun!</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Ideas</h2>
+    </section>
+    <section>
+        <h3>fluxservice module as base for social media integrations</h3>
+    </section>
+    <section>
+        <h3>Content marketing</h3>
+    </section>
+    <section>
+        <h3>Easy dev automation</h3>
+    </section>
+    <section>
+        <h3>Integrate with other self-hosted tools</h3>
+        owncloud, e-mail server, ...
+    </section>
+    <section>
+        <h3>Internet of things</h3>
+    </section>
+    <section>
+        <img src="images/automate-all-the-things.png">
+    </section>
+</section>
+
+<section>
+    <h2>Questions?</h2>
+</section>
+
+<section class="drupalcon-style" data-background="images/background.png">
+    <img src="images/drupalcon_prague_logo_transp_300.png" alt="Drupalcon Logo"
+         style="border:0"/>
+
+    <h2>What did you think?</h2>
+
+    <p>Locate this session at the DrupalCon Prague website:<br/>
+        <a href="http://prague2013.drupal.org/schedule">http://prague2013.drupal.org/schedule</a><br/>
+        Click the “Take the survey” link</p><br/>
+
+    <h2>Thank you!</h2>
+</section>
+
+</div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'zoom', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            { src: 'lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            } },
+            { src: 'plugin/markdown/marked.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: 'plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            } },
+            { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () {
+                return !!document.body.classList;
+            } },
+            { src: 'plugin/notes/notes.js', async: true, condition: function () {
+                return !!document.body.classList;
+            } }
+        ]
+    });
+
+</script>
+
+</body>
+</html>
